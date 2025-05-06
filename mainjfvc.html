@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+   
+        <style>
+        #home {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            margin: 0px 10px;
+        }
+
+        #logo {
+            border-radius: 50%;
+            width: 70px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 0px 100px;
+        }
+
+        #top {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid gray;
+            padding-bottom: 10px;
+        }
+
+        nav {
+            /* display: flex;
+            justify-content: space-around;  
+            align-items: center;  */
+            padding: 0px 100px;
+        }
+
+        nav * {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            transition: font-size 1s ease;
+        }
+        
+        nav *:hover {
+            font-size: 1.3em;
+            color: hsl(256, 78%, 40%);
+        }
+
+        .container {
+            width: 80%;
+            height: 400px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        .flexItem {
+            margin: 50px;
+            perspective: 1000px; /* Para darle profundidad a la rotación */
+             /* Ancho inicial */
+        }
+        .flexItem div {
+            background-color: hsl(185, 89%, 39%, 0.9); /* Color de fondo */
+            border-radius: 20px ;
+            height: 100%; /* Mantener altura completa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: transform 2s ease; /* Transición de transformación */
+            transform-origin: center; /* Punto de rotación */
+
+            -webkit-box-shadow: 9px 19px 27px 1px rgba(0,0,0,0.73);
+            -moz-box-shadow: 9px 19px 27px 1px rgba(0,0,0,0.73);
+            box-shadow: 9px 19px 27px 1px rgba(0,0,0,0.73);
+        }
+
+        .flexItem:hover div {
+            transform: rotateY(180deg); /* Rotar 180 grados sobre el eje X */
+            cursor: pointer;
+        }
+        
+
+    </style>
+    </head> 
+    <body>
+        <div id="top">
+            <header>
+                <img src="../images/j-icon.png" id="logo" alt>           
+                <a id="home" href="index.html">José Francisco VEGA COSTAMAGNA</a>
+            </header>
+            <nav>
+                <a href="./main.html"><h3>Home</h3></a>
+                <!-- <a href="./main.html">regresar</a>  -->
+                <!-- <a href="./portfolio.html">Portfolio</a>
+                <a href="./contacto.html">Contacto</a>  -->
+            </nav>
+
+        </div>
+        <div class="container">
+            <div class="flexItem" id="biografia">
+                <!-- <div class="biografiainfo " style="display: none;">
+                    <header>Biografia</header><hr>
+                    <p>Aqui sabremos mas cositas interesantes</p>
+                </div> -->
+                <div>
+                <div class="biografia">
+                    <header><h3>Biografia</h3></header><hr>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-person icono" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" /></svg>
+                </div>
+            </div>
+
+            </div>
+            <div class="flexItem" id="contacto">
+                <!-- <div class="Contactoinfo " style="display: none;">
+                    <header>Contacto</header><hr>
+                    <p>Aqui te haremos unas preguntas para ver si eres digno</p>
+                </div> -->
+                <div class="contacto">
+                    <div>
+                    <header><h3>Contacto</h3></header><hr>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-envelope icono" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" /></svg>
+                </div>
+                </div>
+            </div>
+        <!--
+            <div class="flexItem" id="portfolio" >
+                 <div class="portfolioinfo " style="display: none;">
+                    <header>Portfolio</header><hr>
+                    <p>Aqui podremos ver cositas maravillosas como tu mi rey</p>
+                    
+                </div>
+
+                <div class="portfolio">
+                    <div>
+                    <header>Portfolio</header><hr>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-suitcase-lg icono" viewBox="0 0 16 16"><path d="M5 2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2h3.5A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5H14a.5.5 0 0 1-1 0H3a.5.5 0 0 1-1 0h-.5A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2zm1 0h4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1M1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H3V3zM15 12.5v-9a.5.5 0 0 0-.5-.5H13v10h1.5a.5.5 0 0 0 .5-.5m-3 .5V3H4v10z" /></svg>
+                </div>
+                </div>
+            </div>
+        -->
+        </div>
+    </body>
+    <script>
+        window.onload = () =>{
+            var items = document.getElementsByClassName("flexItem");
+            for(var i = 0; i<items.length;i++){
+                items[i].addEventListener('mouseenter', function(event){
+                    var elementoAux = event.currentTarget;
+                    elementoAux.style.transform = 'rotateY(180deg)';
+                    //elementoAux.children[0].style.backgroundColor = "#98FF98" //por si queremos cambiar el color
+                    switch(elementoAux.id){
+                        case "biografia":
+                        elementoAux.children[0].innerHTML = '<header><h3>Biografia<h3></header><p>FullStack MERN 2025</p><p>EDEM Escuela de negocios Valencia</p> '
+                        break;
+                        case "contacto":
+                        elementoAux.children[0].innerHTML = '<header><h3>Contacto<h3></header><p>e-mail: jfvprogramador@gmail.com</p> '
+                        break;
+                        /*
+                        case "portfolio":
+                        elementoAux.children[0].innerHTML = '<header>Portfolio</header><hr><p>Aqui  hay bellezas como tu mi rey</p> '
+                        break;
+                        */
+                    }
+                                
+                });
+                items[i].addEventListener('mouseleave',function(event){
+                    var elementoAux = event.currentTarget;
+                    elementoAux.style.transform = 'rotateY(0deg)';
+                   
+                    //elementoAux.children[0].style.backgroundColor = "#0babba"
+                    switch(elementoAux.id){
+                        case "biografia":
+                        elementoAux.children[0].innerHTML = '<header><h3>Biografia<h3></header><hr><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-person icono" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" /></svg>'
+                        break;
+                        case "contacto":
+                        elementoAux.children[0].innerHTML = '<header><h3>Contacto<h3></header><hr><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-envelope icono" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" /></svg>'
+                        break;
+                        /*
+                        case "portfolio":
+                        elementoAux.children[0].innerHTML = '<header>Portfolio</header><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-suitcase-lg icono" viewBox="0 0 16 16"><path d="M5 2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2h3.5A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5H14a.5.5 0 0 1-1 0H3a.5.5 0 0 1-1 0h-.5A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2zm1 0h4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1M1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H3V3zM15 12.5v-9a.5.5 0 0 0-.5-.5H13v10h1.5a.5.5 0 0 0 .5-.5m-3 .5V3H4v10z" /></svg>'
+                        break;
+                        */
+                    }
+                    
+                });
+                items[i].addEventListener("click",function(event){
+                    var elementoAux = event.currentTarget;
+                    var id = elementoAux.id;
+                    console.log(id);
+                    window.location.href = (id+".html");
+                })
+            }
+        }
+    </script>
+</html>
+
+
+
+
+
+
+
+
+

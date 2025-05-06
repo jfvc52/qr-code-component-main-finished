@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QR Premiun</title>
+        <!-- link rel="stylesheet" href="styles.css">  --  se puede usar un archivo externo para el CSS -->
+            <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+                    * {
+                        font-family: "Roboto";
+                        /* margin: 0;
+                        padding: 0;  
+                        box-sizing: border-box;  */
+                        text-decoration: none;
+                    }
+                    header{ 
+                        background-color: hsl(110, 35%, 64%);
+                        width: 100%;                
+                        height: 80px;
+                        display: flex;
+                        border: 0px 20px;
+                        /* https://www.cssmatic.com/box-shadow */
+                        -webkit-box-shadow: 10px 10px 5px 0px rgba(128,128,128,1);
+                        -moz-box-shadow: 10px 10px 5px 0px rgba(128,128,128,1);
+                        box-shadow: 10px 10px 5px 0px hwb(0 50% 50% 0.91);
+                    }
+                    header img{ 
+                        width:  65px;
+                        height: 65px;
+                        border-radius: 65%;
+                        align-items: center;
+                        padding: 8px 20px;
+                    }
+                    header #header-a{ 
+                    
+                    width:  800px;
+                    padding: 0px 30px;
+                    color:   hsla(11, 94%, 28%, 0.91);
+                    }
+                    nav {
+                        width: 100%;
+                        /* gap: 15px;  */
+                        display: flex;
+                        justify-content:right;
+                        align-items: center;
+                    }
+                    nav a{
+                        text-decoration: none;
+                        color:   hsla(11, 94%, 28%, 0.91);
+                        padding: 0px 30px;
+                    }
+                    nav h3 {
+                        /* font-size: 1.5em;  */
+                        color: hsla(11, 94%, 28%, 0.91);
+                        padding: 0px 30px;
+                    }
+                    nav * {
+                        transition: font-size 1s ease; /* Transición de tamaño de fuente */
+                    }
+                    nav *:hover {
+                        cursor: pointer;
+                        font-size: 1.2em;
+                        color: hsla(215, 83%, 43%, 0.973);
+                    }
+                    .container {
+                        border-radius: 20px ;
+                        width: 100%;
+                        height: 450px;
+                        margin: auto;
+                        display: flex;
+                        justify-content: space-around; 
+                    }
+
+                    /* @media (max-width: 600px) {
+                        .flexItem {
+                            flex-direction: column;
+                        }
+                    }  */
+                    .biografia img{
+                        border-radius: 30px ;
+                        padding: 10px 15px;
+                    }
+
+                    .flexItem {
+                        margin: 20px; /* Espacio entre los cuadros */
+                        perspective: 1000px; /* Para darle profundidad a la rotación */
+                    }
+                    .flexItem div {
+                        background-color: hsla(185, 89%, 39%, 0.91);
+                        border-radius: 20px ;
+                        height: 100%; /* Mantener altura completa */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        transition: transform 1s ease; /* Transición de transformación */
+                        transform-origin: center; /* Punto de rotación */
+                        /* width: 100%;    Ancho del cuadro */
+                        
+                        -webkit-box-shadow: 9px 19px 27px 1px rgba(0,0,0,0.73);
+                        -moz-box-shadow: 9px 19px 27px 1px rgba(0,0,0,0.73);
+                        box-shadow: 9px 19px 27px 7px rgba(0,0,0,0.73);
+                    }
+
+                    .flexItem:hover {
+                        transform: rotateY(360deg); /* Rotar 180 grados sobre el eje X */
+                        color: hsla(0, 61%, 44%, 0.651);
+                        cursor: pointer;  
+                        
+                    }
+                    .contacto {
+                        background-color: hsla(145, 49%, 77%, 0.91);
+                        border-radius: 20px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        margin-top: 0px;
+                        padding: 0px 10px;
+                    }
+            
+            </style>
+
+        <!--  comienza HTML-->
+        </head>
+        <body>
+            <!--<div id="top">  -->
+                <!--  Titulo/Encabezado ** Franja Superior**   -->
+                    <header>
+                            <img src="../images/favicon-32x32.png" id="logo" alt>
+                            <a  id="header-a" href="index.html"><h2>Frontend MENTOR & José  Francisco</h2></a>
+        
+                            <nav>
+                                <a href="./mainjfvc.html"><h3>Coded maked</h3></a>
+                                <a href="./index1.html"><h3>Diseño basico</h3></a>
+                                <a href="./index2.html"><h3>Diseño mejorado</h3></a>
+                            </nav>
+                    </header>
+            <!--</div>-->
+        <div class="container">  <!--  caja donde estan ambos bloques dividido en la 1/2  -->
+            <div class="flexItem" id="biografia">             
+                <div>
+                        <div class="biografia">
+                                        <!--  1er cuadro izq titulo + imagen-->
+                                        <per><h1>QR code component</h1></per>
+                                        <img  src="../images/image-qr-code-1.png" alt="QR code" class="qr-code">
+                        </div>
+                </div>
+            </div>
+            <div class="flexItem" id="contacto">
+                        <div class="contacto">
+                                    <!--  2do. cuadro DERECHO  titulo FRENTE + titulo DORSO-->
+                                            <pre><h1>     D e t a i l s     </h1></pre>
+                                            <pre><h2>  Improve your front-end skills by building projects.</h2></pre> 
+                                            <pre><h2>  Scan the QR code to visit Frontend Mentor</h2></pre> 
+                                            <pre><h2>  take your coding skills to the next level.</h2></pre>                      
+                           
+                        </div> 
+            </div>      <!--  ---------- ********F I N********** --------------------  -->           
+        </div>   <!--  *****fin contenedor*****  -->
+        </body>
+
+        <footer>
+            <div class="foot">
+                    <h4>Frontend Mentor -- JOSE  FRANCISCO</h4>
+                    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend QR code Mentor</a>
+                    Coded maked: <a href="./mainjfvc.html">Jose Francisco.</a>
+            </div>    
+            <style>
+                        .foot {
+                           /*  font-family: sans-serif;   */
+                           font-family: Sans-Serif;
+                           font-size: 22px;
+                            font-weight: 550;
+                            /*  margin: 5px;  */
+                            text-align: center;
+                        }
+                        .foot a {
+                            font-size: 15px;
+                            font-weight: 700;
+                            color: hsl(14, 78%, 37%);
+                            margin: 5px;
+                            text-decoration: none;
+                        }
+                        .foot a:hover {
+                            text-decoration: underline;
+                            color: hsl(120, 90%, 25%);
+                            font-weight: 900;
+                        }
+            </style>
+        </footer>
+        <script>   /*  c o m i e n z o  JAVAScript */
+            window.onload = () =>{
+                var items = document.getElementsByClassName("flexItem");
+                for(var i = 0; i<items.length;i++){
+                    items[i].addEventListener('mouseenter', function(event){
+                        var elementoAux = event.currentTarget;
+                        elementoAux.style.transform = 'rotateY(0deg)';
+                       /* elementoAux.children[0].style.backgroundColor = "#91dbed79" //por si queremos cambiar el color */
+                        switch(elementoAux.id){
+                            case "biografia":
+                            // elementoAux.children[0].innerHTML = '<header>../images/image-qr-code-A.png</header><hr> '
+                            elementoAux.children[0].innerHTML = '<a><h1>   Improve your front-end   </h1></a><a><h1>   skills by building projects   </h1></a><pre><h2>   Scan the QR code to visit Frontend   </h2></pre><a><h2>   Mentor and take your coding   </h2></a><a><h2>   skills to the next level.   </h2</a>';
+                            break;
+                            case "contacto":
+                            elementoAux.children[0].innerHTML = '<a><h1>     Instrucciones     </h1></a><a><h3>  Mejore sus habilidades de front-end construyendo proyectos,</h3></a><a><h3>   escanee el código QR para visitar Frontend Mentor</h3></a><a><h3>  y llevar sus habilidades de codificación al siguiente nivel</h3></a>'
+                            break;
+                        }
+                    });
+                    items[i].addEventListener('mouseleave',function(event){
+                        var elementoAux = event.currentTarget;
+                        elementoAux.style.transform = 'rotateY(0deg)';
+                        //elementoAux.children[0].style.backgroundColor = "#0babba"  //por si queremos cambiar el color
+                        switch(elementoAux.id){
+                            case "biografia":
+                            elementoAux.children[0].innerHTML = '<pre><h1>    QR code component     </h1></pre><img src="../images/image-qr-code-1.png" alt="QR code" class="qr-code">';
+                            // elementoAux.children[0].innerHTML = '<header>../images/image-qr-code-1.png</header><hr> '
+                            break;
+                            case "contacto":
+                            elementoAux.children[0].innerHTML = '<pre><h1>     D e t a i l s     </h1></pre><pre><h2>  Improve your front-end skills by building projects.</h2></pre><pre><h2>  Scan the QR code to visit Frontend Mentor</h2></pre><pre><h2>   and take your coding skills to the next level.</h2></pre>'
+                            // elementoAux.children[0].innerHTML = '<header>--Con---</header><hr><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"class="bi bi-envelope icono" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" /></svg>'
+                            break;
+                        }
+                    });
+                    items[i].addEventListener("click",function(event){
+                        var elementoAux = event.currentTarget;
+                        var id = elementoAux.id;
+                        console.log(id);
+                        window.location.href = (id+".html");
+                    })
+                }
+            }   
+        </script>
+    </html>
+    <!--    F I N!!!!!!!!!!!!! -->
